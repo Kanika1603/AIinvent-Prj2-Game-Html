@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Neon Runner | Cyberpunk Endless Runner</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div id="game-container">
+        <!-- CRT scanline overlay -->
+        <div class="scanlines"></div>
+        
+        <div id="ui-layer">
+            <div id="score-board">
+                <span id="score-label">SCORE</span>
+                <span id="score">0</span>
+            </div>
+            
+            <!-- Start Screen -->
+            <div id="start-screen">
+                <div class="glitch-container">
+                    <h1 class="glitch" data-text="NEON RUNNER">NEON RUNNER</h1>
+                </div>
+                
+                <div id="intel-panel">
+                    <h3>MISSION INTEL</h3>
+                    <div class="level-info">
+                        <div class="level-item">
+                            <span class="lvl-tag lvl-1">L1</span>
+                            <div class="lvl-desc"><strong>NEON CITY:</strong> Navigate the 3D skyline. Watch for <strong>Structural Blocks</strong> and <strong>Defense Pyramids</strong>.</div>
+                        </div>
+                        <div class="level-item">
+                            <span class="lvl-tag lvl-2">L2</span>
+                            <div class="lvl-desc"><strong>THE GRID:</strong> Digital surveillance active. Avoid <strong>Rotating Cubes</strong> and <strong>Seeker Drones</strong>.</div>
+                        </div>
+                        <div class="level-item">
+                            <span class="lvl-tag lvl-3">L3</span>
+                            <div class="lvl-desc"><strong>HYPER DRIVE:</strong> Industrial density zone. High-voltage <strong>Laser Gates</strong> detected. Precision jumps required.</div>
+                        </div>
+                        <div class="level-item">
+                            <span class="lvl-tag lvl-4">L4</span>
+                            <div class="lvl-desc"><strong>THE VOID:</strong> Reality collapse imminent. Dodge shifting <strong>Glitch Shards</strong> as the system dissolves.</div>
+                        </div>
+                    </div>
+                    
+                    <div class="controls-info">
+                        <p><strong>SPACE / TAP</strong> - JUMP (DOUBLE JUMP ENABLED)</p>
+                        <p><strong>NEAR MISSES</strong> TRIGGER SLOW-MO FOCUS</p>
+                    </div>
+                </div>
+
+                <button id="start-btn">ENGAGE NEURAL LINK</button>
+            </div>
+
+            <!-- Game Over Screen -->
+            <div id="game-over-screen" class="hidden">
+                <h1 class="glitch" data-text="SYSTEM FAILURE">SYSTEM FAILURE</h1>
+                <p>MEMORY CLEARED. FINAL SCORE: <span id="final-score">0</span></p>
+                <button id="restart-btn">RESTORE BACKUP</button>
+            </div>
+        </div>
+
+        <canvas id="game-canvas"></canvas>
+    </div>
+
+    <script src="game.js"></script>
+</body>
+</html>
